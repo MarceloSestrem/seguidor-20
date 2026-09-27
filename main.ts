@@ -120,6 +120,18 @@ namespace robotbitPro {
     }
 
     /**
+     * Desliga e freia imediatamente TODOS os motores DC conectados à placa expansora.
+     */
+    //% blockId=robotbit_parar_todos_motores
+    //% block="parar todos os motores"
+    //% weight=90
+    export function pararTodosOsMotores(): void {
+        controlarMotor(MotorSelecao.M1A, 0);
+        controlarMotor(MotorSelecao.M1B, 0);
+        controlarMotor(MotorSelecao.M2A, 0);
+        controlarMotor(MotorSelecao.M2B, 0);
+    }
+    /**
      * Controla o ângulo de um Servo Motor conectado diretamente às portas S1, S2, S3 ou S4 da Robotbit.
      * @param porta Porta do servo (S1 a S4)
      * @param angulo Ângulo desejado (0 a 180 graus)
